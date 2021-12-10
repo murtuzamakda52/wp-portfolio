@@ -1,6 +1,6 @@
 <?php 
 /**
-* Plugin Name: wp-portfolio
+* Plugin Name: portfolio
 * Plugin URI: https://test-projext.000webhostapp.com/
 * Description: This is the very first plugin I ever created and this is a unique plugin because using .
 * Version: 1.0

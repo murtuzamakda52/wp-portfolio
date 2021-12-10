@@ -34,7 +34,16 @@ $args = array(
         <div class="tagged-portfolio">
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="single-portfolio" data-title="<?php the_title(); ?>">
-            <h2><a href="<?php the_permalink(); ?>"><?php  the_post_thumbnail(array(400, 300)); ?></a></h2>
+            <h2><a href="<?php the_permalink(); ?>"><?php  
+
+            if(has_post_thumbnail()){
+            the_post_thumbnail(array(400, 300)); ?></a></h2>
+            <?php
+            }
+            else{
+            echo '<img src="'.plugins_url('/assets/placeholderimage.jpg',__FILE__).'" width="400" height="300" style="height:167px !important">';
+            }
+            ?>
             </div>
 
             <?php endwhile; ?>
